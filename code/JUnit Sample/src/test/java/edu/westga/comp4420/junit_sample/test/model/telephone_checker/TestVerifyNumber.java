@@ -1,7 +1,12 @@
 package edu.westga.comp4420.junit_sample.test.model.telephone_checker;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Random;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import edu.westga.comp4420.junit_sample.model.TelephoneChecker;
@@ -15,7 +20,6 @@ class TestVerifyNumber {
 		
 		boolean result = checker.verifyNumber(number);
 		
-		Assertions.assertEquals(expectedResult, result, "checking if (" + number + ") was reported as valid");
+		assertEquals(expectedResult, result, "checking if (" + number + ") was reported as valid");
 	}
 }
-
