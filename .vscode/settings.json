@@ -1,0 +1,3 @@
+{
+    "java.checkstyle.configuration": "${workspaceFolder}\\code\\JUnit Sample\\devops_checks.xml"
+}
