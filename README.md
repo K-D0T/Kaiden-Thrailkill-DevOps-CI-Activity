@@ -18,3 +18,7 @@ To use this class, you need to create an instance of `TelephoneChecker` and call
 TelephoneChecker checker = new TelephoneChecker();
 boolean isValid = checker.verifyNumber(1234567890L);
 boolean isSpam = checker.identifySpam(1234567890L);
+
+
+
+
