@@ -15,12 +15,12 @@ public class TelephoneChecker {
 	public boolean verifyNumber(long number) {
 		if (number < 1000000L) {
 			return false;
-		} else if (number <= 9999999L) {
-			return true;
+		} else if (number < 9999999L) {
+			return false;
 		} else if (number < 1000000000L) {
 			return false;
 		} else {
-			return number <= 9999999999L;
+			return number < 9999999999L;
 		} 
 	}
 	
@@ -42,15 +42,6 @@ public class TelephoneChecker {
 	 * 			false	if number does not match heuristics for potential spam
 	 */
 	public boolean identifySpam(long number) {
-
-		if (!this.verifyNumber(number)) {
-			throw new IllegalArgumentException("number must be a valid phone number");
-		}
-		
-		String numberString = Long.toString(number);
-		String areaCode = numberString.substring(0, 3);
-		
-		return areaCode.equals("999") || areaCode.equals("900") || areaCode.equals("888") || areaCode.equals("800") || areaCode.equals("911") || areaCode.equals("411");
-
+		return false;
 	}
 }
